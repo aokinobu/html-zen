@@ -1,4 +1,5 @@
 class Zen extends HTMLElement {
+  static dis = false;
   // A getter/setter for an open property.
   get open() {
     return this.hasAttribute("open");
@@ -37,16 +38,26 @@ class Zen extends HTMLElement {
     // Setup a click listener on <app-drawer> itself.
     this.addEventListener("click", e => {
       // Don't toggle the drawer if it's disabled.
-      if (this.disabled) {
-        return;
-      }
+      // if (this.disabled) {
+      //   return;
+      // }
       this.toggleDrawer();
     });
     this.innerHTML = "start";
   }
 
   toggleDrawer() {
-    this.innerHTML = "hi";
+    if (this.dis) {
+      this.innerHTML = "true";
+      console.log(this.dis);
+      this.dis = !this.dis;
+      console.log(this.dis);
+    } else {
+      this.innerHTML = "false";
+      console.log(this.dis);
+      this.dis = !this.dis;
+      console.log(this.dis);
+    }
   }
 }
 customElements.define("html-zen", Zen);
