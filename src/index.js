@@ -1,5 +1,5 @@
 class Zen extends HTMLElement {
-  static dis = false;
+  dis = false;
   // A getter/setter for an open property.
   get open() {
     return this.hasAttribute("open");
