@@ -1,10 +1,14 @@
 {
-  "name": "new",
+  "name": "zen",
   "version": "1.0.0",
-  "description": "",
+  "description": "Zen Main App",
+  "license": "Zen Project License",
+  "repository": "https://github.com/aokinobu/html-zen.git",
   "keywords": [],
   "main": "src/index.js",
-  "dependencies": {},
+  "dependencies": {
+    "html-zen-progress": "git+https://github.com/aokinobu/html-zen-progress.git"
+  },
   "devDependencies": {
     "typescript": "3.3.3"
   },
